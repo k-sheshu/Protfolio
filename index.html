@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kurapati Sheshu - Portfolio</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background: url('back.jpg') center center fixed;
+            background-size: cover;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            text-align: center;
+            color: #fff;
+            font-family: 'Arial', sans-serif;
+        }
+        
+        header {
+            padding: 20px;
+            width: 100%;
+            box-sizing: border-box;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 36px;
+            font-weight: bold;
+            font-family: 'Assistant', sans-serif;
+            letter-spacing: 2px;
+            line-height: normal;
+        }
+
+        p {
+            margin: 0;
+            font-family: 'Linotype Didot', serif;
+            letter-spacing: 1px;
+            line-height: 2.0;
+        }
+
+        .menu-icon {
+            display: block;
+            cursor: pointer;
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            color: #fff;
+            font-size: 24px;
+            z-index: 2;
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: transparent;
+            padding-top: 20px;
+            color: #fff;
+            text-align: center;
+            z-index: 1;
+            display: none;
+        }
+
+        nav a {
+            display: block;
+            padding: 10px;
+            color: #fff;
+            text-decoration: none;
+            margin-bottom: 20px;
+            cursor: pointer;
+        }
+
+        section {
+            background-color: transparent;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            text-align: center;
+            color: #fff;
+            padding: 20px;
+            display: none;
+        }
+
+        #home {
+            background: url('back3.jpg') center center fixed;
+            background-size: cover;
+        }
+
+        #home img {
+            width: 300px;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 50%;
+            position: relative;
+            overflow: hidden;
+        }
+
+        #home img::before {
+            content: url('');
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
+
+        #home h2 {
+            color: #ff5733;
+            font-family: 'Arial', sans-serif;
+        }
+
+        #Intro {
+            background: url('back3.jpg') center center fixed;
+            background-size: cover;
+            background-color: lavender;
+        }
+
+        #Intro h2 {
+            color: #00ff00;
+            font-family: 'Times New Roman', serif;
+        }
+
+        #cv {
+            background: url('back3.jpg') center center fixed;
+            background-size: cover;
+            background-color: lavender;
+        }
+
+        #cv h2 {
+            color: #fbff00;
+            font-family: 'Courier New', monospace;
+        }
+
+        #cv button {
+            background-color: #4285f4;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            margin: 5px;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        #cv button.download {
+            background-color: #e74c3c;
+        }
+
+        #contact {
+            background: url('back3.jpg') center center fixed;
+            background-size: cover;
+            background-color: rgb(223, 18, 18);
+        }
+
+        #contact h2 {
+            color: #ff001e;
+            font-family: 'Verdana', sans-serif;
+        }
+
+        @media only screen and (max-width: 600px) {
+            nav {
+                height: 100%;
+            }
+
+            nav a {
+                display: block;
+                width: 100%;
+                box-sizing: border-box;
+            }
+
+            section {
+                margin-top: 70px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="menu-icon" onclick="toggleMenu()">☰</div>
+
+    <nav id="mainNav">
+        <a onclick="showSection('home')">Home</a>
+        <a onclick="showSection('Intro')">About Me</a>
+        <a onclick="showSection('cv')">CV</a>
+        <a onclick="showSection('contact')">Contact</a>
+    </nav>
+    
+
+    <header>
+        <h1><span style="color: black;">Hey! I'm </span><span style="color: red;">Kurapati Sheshu</span></h1>
+        <p>Data science trainee, passionate about turning data into insights.</p>
+        <div class="menu-icon" onclick="toggleMenu()">☰</div>
+    </header>
+
+    <section id="home">
+        <img src="sheshu pic.jpeg" alt="Kurapati Sheshu">
+        <h2>Welcome to My Portfolio</h2>
+        <p>Hello, and thank you for visiting my portfolio. I invite you to explore the available options by clicking on the menu icon.</p>
+    </section>
+
+    <section id="Intro">
+        <h2>About Me</h2>
+        <p>I am a passionate and dedicated Data Science Trainee with a strong foundation in data processing, data visualization, and Python programming. 
+            My journey in data science is driven by a curiosity to uncover actionable insights from complex datasets and create impactful visualizations 
+            that tell compelling stories. I excel in cleaning, organizing, and transforming raw data into meaningful formats, ensuring accuracy and reliability 
+            for analysis. With proficiency in Python and libraries like NumPy, Pandas, and Scikit-learn, I can handle data manipulation, analysis, 
+            and machine learning tasks efficiently. Additionally, I am skilled in creating dynamic visual representations using tools like Matplotlib, Seaborn, 
+            Plotly, and Power BI, leveraging DAX and Power Query to design interactive dashboards that uncover trends and drive informed decision-making.</p>
+
+        <p>What sets me apart is my strong commitment to continuous learning and staying updated with the latest trends in data science. 
+            I have hands-on experience working on real-world data analysis and visualization projects, showcasing my ability to apply theoretical knowledge 
+            in practical scenarios. My expertise in MySQL enables me to write optimized SQL queries for data extraction, transformation, 
+            and database management, ensuring structured and efficient analysis. With a problem-solving mindset and a passion for leveraging data to 
+            address challenging business problems, I am eager to contribute my skills to impactful projects that create value and drive meaningful insights.</p>
+
+    </section>
+
+    <section id="cv">
+        <h2>Curriculum Vitae (CV)</h2>
+        <p>You can view or download using the below buttons.</p>
+
+        <button onclick="viewCV('My Resume.pdf')">View</button>
+
+        <button onclick="downloadCV()" class="download">Download</button>
+    </section>
+
+
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>Mobile No: 9391739902</p>
+        <p>Email: kurapatisheshu@gmail.com</p>
+        <p>LinkedIn: www.linkedin.com/in/k-sheshu</p>
+        <p>GitHub: https://github.com/k-sheshu</p>
+    </section>
+
+    <script>
+
+        function viewCV(pdfFilename) {
+            window.open(pdfFilename, '_blank');
+        }
+
+        function downloadCV() {
+            var link = document.createElement('a');
+            link.href = 'My Resume.pdf';
+            link.download = 'My Resume.pdf';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+
+
+        function showSection(sectionId) {
+            var sections = document.querySelectorAll('section');
+            sections.forEach(function (section) {
+                section.style.display = 'none';
+            });
+
+            var selectedSection = document.getElementById(sectionId);
+            if (selectedSection) {
+                selectedSection.style.display = 'flex';
+            }
+
+            hideMenu();
+        }
+
+        function toggleMenu() {
+            var nav = document.getElementById('mainNav');
+            var sections = document.querySelectorAll('section');
+            nav.style.display = nav.style.display === 'none' ? 'block' : 'none';
+            sections.forEach(function (section) {
+                section.style.display = 'none';
+            });
+        }
+
+        function hideMenu() {
+            var nav = document.getElementById('mainNav');
+            nav.style.display = 'none';
+        }
+    </script>
+</body>
+
+</html>
